@@ -18,7 +18,15 @@
 #include <stdlib.h>
 #include <string.h>
 #include "fscrypt_policy.h"
-#include "fscrypt/fscrypt.h"
+#include <stdio.h>
+#include <string.h>
+#include <fcntl.h>
+#include <sys/ioctl.h>
+#include <linux/fs.h>
+#include <unistd.h>
+#include <android-base/logging.h>
+
+#include "fscrypt_policy.h"
 
 int main(int argc, char *argv[]) {
 	if (argc != 2) {
